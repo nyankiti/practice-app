@@ -15,6 +15,7 @@ export type BottomTabParamList = {
 
 export type TabOneParamList = {
   TabOneScreen: undefined;
+  ReanimatedScreen: undefined;
 };
 
 export type TabTwoParamList = {
