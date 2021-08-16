@@ -11,9 +11,21 @@ export default function TabOneScreen({ navigation }: any) {
   return (
     <View style={styles.container}>
       <ListItem
-        title="reanimated"
+        title="Reanimated"
         onPress={() => {
           navigation.navigate("ReanimatedScreen");
+        }}
+      />
+      <ListItem
+        title="PanGesture"
+        onPress={() => {
+          navigation.navigate("PanGestureScreen");
+        }}
+      />
+      <ListItem
+        title="Interpolate"
+        onPress={() => {
+          navigation.navigate("InterpolateScreen");
         }}
       />
     </View>
