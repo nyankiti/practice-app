@@ -4,15 +4,11 @@ import Animated, {
   useAnimatedScrollHandler,
   useSharedValue,
 } from "react-native-reanimated";
-import {
-  PanGestureHandler,
-  PanGestureHandlerGestureEvent,
-} from "react-native-gesture-handler";
 import Page from "../components/Page";
 
 const WORDS = ["what's", "up", "mobile", "devs?"];
 
-export default function PanGestureScreen() {
+export default function InterpolateScreen() {
   const translateX = useSharedValue(0);
 
   const scrollHandler = useAnimatedScrollHandler((event) => {

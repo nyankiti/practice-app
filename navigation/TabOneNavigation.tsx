@@ -8,10 +8,20 @@ import TabOneScreen from "../screens/TabOneScreen";
 import ReanimatedScreen from "../screens/ReanimatedScreen";
 import PanGestureScreen from "../screens/PanGestureScreen";
 import InterpolateScreen from "../screens/InterpolateScreen";
+import InterpolateColorScreen from "../screens/InterpolateColorScreen";
+import PinchGestureHandlerScreen from "../screens/PinchGestureHandlerScreen";
 /* types */
 import { TabOneParamList } from "../types";
 
 export default TabOneNavigator;
+
+export const screens = [
+  "Reanimated",
+  "PanGesture",
+  "Interpolate",
+  "InterpolateColor",
+  "PinchGestureHandler",
+];
 
 const TabOneStack = createStackNavigator<TabOneParamList>();
 
@@ -34,6 +44,14 @@ function TabOneNavigator() {
       <TabOneStack.Screen
         name="InterpolateScreen"
         component={InterpolateScreen}
+      />
+      <TabOneStack.Screen
+        name="InterpolateColorScreen"
+        component={InterpolateColorScreen}
+      />
+      <TabOneStack.Screen
+        name="PinchGestureHandlerScreen"
+        component={PinchGestureHandlerScreen}
       />
     </TabOneStack.Navigator>
   );

@@ -18,6 +18,8 @@ export type TabOneParamList = {
   ReanimatedScreen: undefined;
   PanGestureScreen: undefined;
   InterpolateScreen: undefined;
+  InterpolateColorScreen: undefined;
+  PinchGestureHandlerScreen: undefined;
 };
 
 export type TabTwoParamList = {

@@ -1,33 +1,24 @@
 import React from "react";
 import { StyleSheet } from "react-native";
 import { Text, View } from "../components/Themed";
-
+import { screens } from "../navigation/TabOneNavigation";
 /* components */
 import ListItem from "../components/ListItem";
-
-const SIZE = 100.0;
 
 export default function TabOneScreen({ navigation }: any) {
   return (
     <View style={styles.container}>
-      <ListItem
-        title="Reanimated"
-        onPress={() => {
-          navigation.navigate("ReanimatedScreen");
-        }}
-      />
-      <ListItem
-        title="PanGesture"
-        onPress={() => {
-          navigation.navigate("PanGestureScreen");
-        }}
-      />
-      <ListItem
-        title="Interpolate"
-        onPress={() => {
-          navigation.navigate("InterpolateScreen");
-        }}
-      />
+      {screens.map((screen, index) => {
+        return (
+          <ListItem
+            key={index.toString()}
+            title={screen}
+            onPress={() => {
+              navigation.navigate(`${screen}Screen`);
+            }}
+          />
+        );
+      })}
     </View>
   );
 }
