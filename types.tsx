@@ -20,8 +20,12 @@ export type TabOneParamList = {
   InterpolateScreen: undefined;
   InterpolateColorScreen: undefined;
   PinchGestureHandlerScreen: undefined;
+  ScrollViewByPanGestureScreen: undefined;
+  CircularBarScreen: undefined;
 };
 
 export type TabTwoParamList = {
   TabTwoScreen: undefined;
+  SvgCircleScreen: undefined;
+  BedtimeScreen: undefined;
 };

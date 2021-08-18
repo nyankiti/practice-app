@@ -1,9 +1,9 @@
 import React from "react";
 import { StyleSheet } from "react-native";
-import { Text, View } from "../components/Themed";
-import { screens } from "../navigation/TabOneNavigation";
+import { Text, View } from "../../components/Themed";
+import { screens } from "../../navigation/TabOneNavigation";
 /* components */
-import ListItem from "../components/ListItem";
+import ListItem from "../../components/ListItem";
 
 export default function TabOneScreen({ navigation }: any) {
   return (

@@ -4,12 +4,14 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { Ionicons } from "@expo/vector-icons";
 import { Text } from "react-native";
 /* screen */
-import TabOneScreen from "../screens/TabOneScreen";
-import ReanimatedScreen from "../screens/ReanimatedScreen";
-import PanGestureScreen from "../screens/PanGestureScreen";
-import InterpolateScreen from "../screens/InterpolateScreen";
-import InterpolateColorScreen from "../screens/InterpolateColorScreen";
-import PinchGestureHandlerScreen from "../screens/PinchGestureHandlerScreen";
+import TabOneScreen from "../screens/TabOne/TabOneScreen";
+import ReanimatedScreen from "../screens/TabOne/ReanimatedScreen";
+import PanGestureScreen from "../screens/TabOne/PanGestureScreen";
+import InterpolateScreen from "../screens/TabOne/InterpolateScreen";
+import InterpolateColorScreen from "../screens/TabOne/InterpolateColorScreen";
+import PinchGestureHandlerScreen from "../screens/TabOne/PinchGestureHandlerScreen";
+import ScrollViewByPanGestureScreen from "../screens/TabOne/ScrollViewByPanGestureScreen";
+import CircularBarScreen from "../screens/TabOne/CircularBarScreen";
 /* types */
 import { TabOneParamList } from "../types";
 
@@ -21,6 +23,8 @@ export const screens = [
   "Interpolate",
   "InterpolateColor",
   "PinchGestureHandler",
+  "ScrollViewByPanGesture",
+  "CircularBar",
 ];
 
 const TabOneStack = createStackNavigator<TabOneParamList>();
@@ -52,6 +56,14 @@ function TabOneNavigator() {
       <TabOneStack.Screen
         name="PinchGestureHandlerScreen"
         component={PinchGestureHandlerScreen}
+      />
+      <TabOneStack.Screen
+        name="ScrollViewByPanGestureScreen"
+        component={ScrollViewByPanGestureScreen}
+      />
+      <TabOneStack.Screen
+        name="CircularBarScreen"
+        component={CircularBarScreen}
       />
     </TabOneStack.Navigator>
   );
