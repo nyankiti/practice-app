@@ -10,7 +10,7 @@ const DELTA = TAU / LINES;
 const Quadrant = () => {
   return (
     <>
-      {/* 以下の円は外枠の円 */}
+      {/* 黒い、メーターの下地となる円 strokeで色を出している*/}
       <Circle
         strokeWidth={STROKE}
         stroke="#1C1B1D"

@@ -13,8 +13,8 @@ import {
 import Label from "./Label";
 
 interface ContainerProps {
-  start: Animated.SharedValue<number>;
-  end: Animated.SharedValue<number>;
+  hand: Animated.SharedValue<number>;
+  top: Animated.SharedValue<number>;
   children: ReactNode;
 }
 
@@ -36,9 +36,9 @@ const styles = StyleSheet.create({
   },
 });
 
-const Container = ({ start, end, children }: ContainerProps) => {
+const Container = ({ hand, top, children }: ContainerProps) => {
   const duration = useDerivedValue(() => {
-    const d = absoluteDuration(start.value, end.value);
+    const d = absoluteDuration(hand.value, top.value);
     return formatDuration2(radToMinutes(d));
   });
   return (

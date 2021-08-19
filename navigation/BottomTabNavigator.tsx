@@ -12,6 +12,7 @@ import useColorScheme from "../hooks/useColorScheme";
 /* navigator */
 import TabOneNavigator from "./TabOneNavigation";
 import TabTwoNavigator from "./TabTwoNavigation";
+import TabThreeNavigator from "./TabThreeNavigation";
 /* screen */
 import TabOneScreen from "../screens/TabOne/TabOneScreen";
 import TabTwoScreen from "../screens/ExampleScreen";
@@ -39,6 +40,15 @@ export default function BottomTabNavigator() {
       <BottomTab.Screen
         name="TabTwo"
         component={TabTwoNavigator}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon name="ios-code" color={color} />
+          ),
+        }}
+      />
+      <BottomTab.Screen
+        name="TabThree"
+        component={TabThreeNavigator}
         options={{
           tabBarIcon: ({ color }) => (
             <TabBarIcon name="ios-code" color={color} />

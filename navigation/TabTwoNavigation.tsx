@@ -1,18 +1,15 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-/* components */
-import { Ionicons } from "@expo/vector-icons";
-import { Text } from "react-native";
 /* screen */
 import TabTwoScreen from "../screens/TabTwo/TabTwoScreen";
 import SvgCircleScreen from "../screens/TabTwo/SvgCircleScreen";
-import BedtimeScreen from "../screens/TabTwo/BedtimeScreen";
+import ClockScreen from "../screens/TabTwo/ClockScreen";
 /* types */
 import { TabTwoParamList } from "../types";
 
 export default TabTwoNavigator;
 
-export const screens = ["SvgCircle", "Bedtime"];
+export const screens = ["SvgCircle", "Clock"];
 
 const TabTwoStack = createStackNavigator<TabTwoParamList>();
 
@@ -25,11 +22,7 @@ function TabTwoNavigator() {
         options={{ headerTitle: "Tab Two Title" }}
       />
       <TabTwoStack.Screen name="SvgCircleScreen" component={SvgCircleScreen} />
-      <TabTwoStack.Screen
-        name="BedtimeScreen"
-        component={BedtimeScreen}
-        options={{ headerTitle: "studyHour" }}
-      />
+      <TabTwoStack.Screen name="ClockScreen" component={ClockScreen} />
     </TabTwoStack.Navigator>
   );
 }

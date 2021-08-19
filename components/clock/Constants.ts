@@ -1,5 +1,4 @@
 import { Dimensions } from "react-native";
-import { Vector } from "react-native-redash";
 
 const { width } = Dimensions.get("window");
 export const PADDING = 24;
@@ -9,21 +8,6 @@ export const R = (SIZE - STROKE) / 2;
 export const { PI } = Math;
 export const TAU = 2 * PI;
 export const CENTER = { x: SIZE / 2, y: SIZE / 2 };
-
-export const containedInSquare = (
-  value: Vector,
-  center: Vector,
-  side: number
-) => {
-  "worklet";
-  const topLeft = { x: center.x - side / 2, y: center.y - side / 2 };
-  return (
-    value.x >= topLeft.x &&
-    value.y >= topLeft.y &&
-    value.x <= topLeft.x + side &&
-    value.y <= topLeft.y + side
-  );
-};
 
 export const normalize = (value: number) => {
   "worklet";
@@ -63,9 +47,4 @@ export const formatDuration2 = (duration: number) => {
 export const arc = (x: number, y: number, large = false, sweep = false) => {
   "worklet";
   return `A ${R} ${R} 0 ${large ? "1" : "0"} ${sweep ? "1" : "0"} ${x} ${y}`;
-};
-
-export const calcLotation = (theta: number) => {
-  "worklet";
-  return ((theta - 0.5 * PI) * 360) / (2 * PI);
 };
