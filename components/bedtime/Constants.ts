@@ -64,3 +64,8 @@ export const arc = (x: number, y: number, large = false, sweep = false) => {
   "worklet";
   return `A ${R} ${R} 0 ${large ? "1" : "0"} ${sweep ? "1" : "0"} ${x} ${y}`;
 };
+
+export const calcLotation = (theta: number) => {
+  "worklet";
+  return ((theta - 0.5 * PI) * 360) / (2 * PI);
+};

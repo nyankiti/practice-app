@@ -25,7 +25,11 @@ function TabTwoNavigator() {
         options={{ headerTitle: "Tab Two Title" }}
       />
       <TabTwoStack.Screen name="SvgCircleScreen" component={SvgCircleScreen} />
-      <TabTwoStack.Screen name="BedtimeScreen" component={BedtimeScreen} />
+      <TabTwoStack.Screen
+        name="BedtimeScreen"
+        component={BedtimeScreen}
+        options={{ headerTitle: "studyHour" }}
+      />
     </TabTwoStack.Navigator>
   );
 }

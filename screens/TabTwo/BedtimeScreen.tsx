@@ -7,11 +7,11 @@ import { PADDING } from "../../components/bedtime/Constants";
 import Container from "../../components/bedtime/components/Container";
 
 const BedtimeScreen = () => {
-  const start = useSharedValue(0);
-  const end = useSharedValue(1.5 * Math.PI);
+  const start = useSharedValue(0.5 * Math.PI);
+  const end = useSharedValue(0.5 * Math.PI);
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Next Wake Up Only</Text>
+      <Text style={styles.title}>今日の勉強時間</Text>
       <Container start={start} end={end}>
         <CircularSlider start={start} end={end} />
       </Container>

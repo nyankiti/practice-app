@@ -20,7 +20,7 @@ interface ContainerProps {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#2C2B2D",
+    backgroundColor: "white",
     borderRadius: 16,
     padding: PADDING,
   },
@@ -29,11 +29,10 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   duration: {
-    fontFamily: "SFProRounded-Medium",
     fontSize: 24,
     textAlign: "center",
     marginTop: PADDING,
-    color: "white",
+    color: "blue",
   },
 });
 
@@ -45,8 +44,8 @@ const Container = ({ start, end, children }: ContainerProps) => {
   return (
     <View style={styles.container}>
       <View style={styles.values}>
-        <Label theta={start} label="BEDTIME" icon="bed" />
-        <Label theta={end} label="WAKE UP" icon="bell" />
+        {/* <Label theta={start} label="BEDTIME" icon="bed" /> */}
+        {/* <Label theta={end} label="WAKE UP" icon="bell" /> */}
       </View>
       {children}
       <ReText style={styles.duration} text={duration} />

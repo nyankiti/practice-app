@@ -28,7 +28,7 @@ export default function PanGestureScreen() {
     ContextInterface
   >({
     onStart: (event, context) => {
-      // contextはjesture中に自在にアクセスできるobject 自分が必要な値をstart時にもたせて置くことで、他のeventの際にその値を参照できる
+      // contextはgesture中に自在にアクセスできるobject 自分が必要な値をstart時にもたせて置くことで、他のeventの際にその値を参照できる
       context.translateX = translateX.value;
       context.translateY = translateY.value;
     },
