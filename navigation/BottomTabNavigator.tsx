@@ -9,14 +9,13 @@ import { createStackNavigator } from "@react-navigation/stack";
 import * as React from "react";
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
+import { MaterialIcons } from "@expo/vector-icons";
 /* navigator */
 import TabOneNavigator from "./TabOneNavigation";
 import TabTwoNavigator from "./TabTwoNavigation";
-import TabThreeNavigator from "./TabThreeNavigation";
+import MusicPlayerNavigator from "./MusicPlayerNavigation";
 /* screen */
-import TabOneScreen from "../screens/TabOne/TabOneScreen";
-import TabTwoScreen from "../screens/ExampleScreen";
-import { BottomTabParamList, TabOneParamList, TabTwoParamList } from "../types";
+import { BottomTabParamList } from "../types";
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -47,11 +46,11 @@ export default function BottomTabNavigator() {
         }}
       />
       <BottomTab.Screen
-        name="TabThree"
-        component={TabThreeNavigator}
+        name="MusicPlayer"
+        component={MusicPlayerNavigator}
         options={{
-          tabBarIcon: ({ color }) => (
-            <TabBarIcon name="ios-code" color={color} />
+          tabBarIcon: ({ color, size }) => (
+            <MaterialIcons name="headset" size={size} color={color} />
           ),
         }}
       />

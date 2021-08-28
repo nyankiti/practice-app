@@ -76,9 +76,12 @@ const Cursor = ({ pos, theta, topPos }: CursorProps) => {
       // 回転中心をtransrateX,Yを使って定めている
       // 詳しくは  https://chrizog.com/react-native-rotation-anchor-point  を参照
       transform: [
+        // デフォルト回転は座標系の左上隅の(0,0)が中心となるため、デフォルト回転中心が指定する回転中心に来るように平行移動する
         { translateX: SIZE / 2 },
         { translateY: SIZE / 2 },
+        // 平行移動先で回転を実施(反時計回り)
         { rotate: `${calcRotation()}deg` },
+        // 回転が終わったら、平行移動して元の位置に戻す
         { translateX: -SIZE / 2 },
         { translateY: -SIZE / 2 },
       ],

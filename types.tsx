@@ -11,7 +11,7 @@ export type RootStackParamList = {
 export type BottomTabParamList = {
   TabOne: undefined;
   TabTwo: undefined;
-  TabThree: undefined;
+  MusicPlayer: undefined;
 };
 
 export type TabOneParamList = {
@@ -29,9 +29,11 @@ export type TabTwoParamList = {
   TabTwoScreen: undefined;
   SvgCircleScreen: undefined;
   ClockScreen: undefined;
+  CubeScreen: undefined;
 };
 
-export type TabThreeParamList = {
-  TabThreeScreen: undefined;
-  CubeScreen: undefined;
+export type MusicPlayerParamList = {
+  AudioListScreen: undefined;
+  PlayListScreen: undefined;
+  PlayerScreen: undefined;
 };

@@ -3905,6 +3905,14 @@ expo-linking@~2.3.1:
     qs "^6.5.0"
     url-parse "^1.4.4"
 
+expo-media-library@12.1.2:
+  version "12.1.2"
+  resolved "https://registry.yarnpkg.com/expo-media-library/-/expo-media-library-12.1.2.tgz#7a152f5ddf9e5e55d07aa28c8a5bd04113c0ebd2"
+  integrity sha512-e2Wh3TD4N2JjmKFFiQ453QgWWARNqc1/vILkEVnxjs34uJmUoT4a89wromr6Xl2fZJUvJDmgmVmL+A9iBWFgaA==
+  dependencies:
+    "@expo/config-plugins" "^3.0.0"
+    expo-modules-core "~0.2.0"
+
 expo-modules-autolinking@^0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/expo-modules-autolinking/-/expo-modules-autolinking-0.0.3.tgz#45ba8cb1798f9339347ae35e96e9cc70eafb3727"
@@ -7014,6 +7022,11 @@ react-is@^17.0.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
+react-native-device-info@^0.26.4:
+  version "0.26.5"
+  resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-0.26.5.tgz#7c63f047894e4cf2d4d9bfa1832444fb37e53569"
+  integrity sha512-Z3/Ue8A0VPtchT/NLykA+sKuOSE6FPNGQMKFqLea+urvYimmzfs1hAVbJ3my+ijnJXpuebu5c4xbYEqaRhuV6w==
+
 react-native-gesture-handler@~1.10.2:
   version "1.10.3"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.10.3.tgz#942bbf2963bbf49fa79593600ee9d7b5dab3cfc0"
@@ -7054,10 +7067,15 @@ react-native-safe-area-context@3.2.0:
   resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-3.2.0.tgz#06113c6b208f982d68ab5c3cebd199ca93db6941"
   integrity sha512-k2Nty4PwSnrg9HwrYeeE+EYqViYJoOFwEy9LxL5RIRfoqxAq/uQXNGwpUg2/u4gnKpBbEPa9eRh15KKMe/VHkA==
 
-react-native-screens@~3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-3.4.0.tgz#91deeac7630db9f3984053e2ab146d71bba7af4e"
-  integrity sha512-cg+q9MRnVdeOcJyvJtqffoXLur/C2wHA/7IO2+FAipzTlgHbbM1mTuSM7qG+SeiQjoIs4mHOEf7A0ziPKW04sA==
+react-native-safe-area-context@3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-3.3.0.tgz#6e0b45baa031589ec9c54f8359ace166a36aa5e5"
+  integrity sha512-IrCNx56LO9RJ75yCf2CSSO1ceLj3mvxTAF+HWnehaeRIfF4pIcIn3WEUlXulFiha641OKS5X0+1XZCbbQ7pITA==
+
+react-native-screens@3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-3.6.0.tgz#054af728e50c06bff6b3b4fa7b4b656b70f247cd"
+  integrity sha512-emQmSu+B6cOIjJH2OIgpuxd9zCD6xz7/oo5GCetyjsM5qR3sMnVgOxqtK99xPu9XJH/8k7MplXbtJgtk/PHXwA==
   dependencies:
     warn-once "^0.1.0"
 
@@ -7068,6 +7086,13 @@ react-native-svg@12.1.1:
   dependencies:
     css-select "^2.1.0"
     css-tree "^1.0.0-alpha.39"
+
+react-native-tracker@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-tracker/-/react-native-tracker-1.0.0.tgz#cebdd78437f458d0057b2bbbb8f9af0439ba58f6"
+  integrity sha512-ZJQT2lQUjzYjO7p2r9VqybdhH0XMx4TO4ep+qFiZevU+1fuH4EaeM7SlF0j87kxQhAzgfJBq97gH3gp4yvvuQQ==
+  dependencies:
+    react-native-device-info "^0.26.4"
 
 react-native-web@~0.13.12:
   version "0.13.18"
