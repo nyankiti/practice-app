@@ -37,3 +37,41 @@ export type MusicPlayerParamList = {
   PlayListScreen: undefined;
   PlayerScreen: undefined;
 };
+
+export type Song = {
+  authors: [
+    {
+      name: string;
+    }
+  ];
+  categories: [];
+  content: undefined;
+  description: string;
+  enclosures: [
+    {
+      length: string;
+      mimeType: "audio/x-m4a";
+      url: string;
+    }
+  ];
+  id: string;
+  itunes: {
+    authors: [];
+    block: undefined;
+    duration: string;
+    explicit: string;
+    image: string;
+    isClosedCaptioned: undefined;
+    order: undefined;
+    subtitle: undefined;
+    summary: string;
+  };
+  links: [
+    {
+      rel: string;
+      url: string;
+    }
+  ];
+  published: string;
+  title: string;
+};
