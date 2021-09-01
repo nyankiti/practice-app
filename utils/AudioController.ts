@@ -25,3 +25,12 @@ export const resume = async (playbackObj: any) => {
   }
 };
 // select another audio
+export const playNext = async (playbackObj: any, uri: string) => {
+  try {
+    await playbackObj.stopAsync();
+    await playbackObj.unloadAsync();
+    return await play(playbackObj, uri);
+  } catch (error) {
+    console.log("error inside playNext helper method: " + error.message);
+  }
+};

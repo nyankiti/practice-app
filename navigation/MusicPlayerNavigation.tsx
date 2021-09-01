@@ -1,5 +1,9 @@
 import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
+import { TouchableOpacity, Text } from "react-native";
+import {
+  createStackNavigator,
+  StackNavigationProp,
+} from "@react-navigation/stack";
 /* components */
 /* screen */
 import AudioListScreen from "../screens/MusicPlayer/AudioListScreen";
@@ -14,17 +18,36 @@ export const screens = [];
 
 const MusicPlayerStack = createStackNavigator<MusicPlayerParamList>();
 
-function MusicPlayerNavigator() {
+function MusicPlayerNavigator({ navigation }) {
   return (
     <MusicPlayerStack.Navigator>
       <MusicPlayerStack.Screen
         name="AudioListScreen"
         component={AudioListScreen}
-        options={{ headerTitle: "Audio List" }}
+        options={{
+          headerTitle: "Play List",
+          headerRight: () => (
+            <TouchableOpacity
+              onPress={() => navigation.navigate("PlayListScreen")}
+            >
+              <Text>PlayList画面へ</Text>
+            </TouchableOpacity>
+          ),
+        }}
       />
       <MusicPlayerStack.Screen
         name="PlayListScreen"
         component={PlayListScreen}
+        options={{
+          headerTitle: "Player",
+          headerRight: () => (
+            <TouchableOpacity
+              onPress={() => navigation.navigate("PlayerScreen")}
+            >
+              <Text>Player画面へ</Text>
+            </TouchableOpacity>
+          ),
+        }}
       />
       <MusicPlayerStack.Screen name="PlayerScreen" component={PlayerScreen} />
     </MusicPlayerStack.Navigator>

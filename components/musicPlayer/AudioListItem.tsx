@@ -29,6 +29,16 @@ type Props = {
   duration: string;
   onOptionPress: any;
   onAudioPress: any;
+  isPlaying: boolean;
+  activeListItem: boolean;
+};
+
+const renderPlayPauseIcon = (isPlaying: boolean) => {
+  if (isPlaying)
+    return (
+      <Entypo name="controller-paus" size={24} color={color.ACTIVE_FONT} />
+    );
+  return <Entypo name="controller-play" size={24} color={color.ACTIVE_FONT} />;
 };
 
 const AudioListItem = ({
@@ -36,14 +46,27 @@ const AudioListItem = ({
   duration,
   onOptionPress,
   onAudioPress,
+  isPlaying,
+  activeListItem,
 }: Props) => {
   return (
     <>
       <View style={styles.container}>
         <TouchableWithoutFeedback onPress={onAudioPress}>
           <View style={styles.leftContainer}>
-            <View style={styles.thumbnail}>
-              <Text style={styles.thumbnailText}>A</Text>
+            <View
+              style={[
+                styles.thumbnail,
+                {
+                  backgroundColor: activeListItem
+                    ? color.ACTIVE_BG
+                    : color.FONT_LIGHT,
+                },
+              ]}
+            >
+              <Text style={styles.thumbnailText}>
+                {activeListItem ? renderPlayPauseIcon(isPlaying) : "A"}
+              </Text>
             </View>
             <View style={styles.titleContainer}>
               <Text numberOfLines={1} style={styles.title}>

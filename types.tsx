@@ -75,3 +75,22 @@ export type Song = {
   published: string;
   title: string;
 };
+
+export type PlaybackStatus = {
+  androidImplementation: string;
+  didJustFinish: boolean;
+  durationMillis: number;
+  isBuffering: boolean;
+  isLoaded: boolean;
+  isLooping: boolean;
+  isMuted: boolean;
+  isPlaying: boolean;
+  playableDurationMillis: number;
+  positionMillis: number;
+  progressUpdateIntervalMillis: number;
+  rate: number;
+  shouldCorrectPitch: boolean;
+  shouldPlay: boolean;
+  uri: string;
+  volume: number;
+};
