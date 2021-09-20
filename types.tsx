@@ -30,6 +30,7 @@ export type TabTwoParamList = {
   SvgCircleScreen: undefined;
   ClockScreen: undefined;
   CubeScreen: undefined;
+  CarouselScreen: undefined;
 };
 
 export type MusicPlayerParamList = {

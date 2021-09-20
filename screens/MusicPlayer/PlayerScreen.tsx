@@ -5,6 +5,7 @@ import color from "../../data/color";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Slider from "@react-native-community/slider";
 import { AudioContext } from "../../context/AudioProvider";
+// import { AudioContext } from "../../context/ClassAudioProvider";
 /* components */
 import PlayerButton from "../../components/musicPlayer/PlayerButton";
 
@@ -22,6 +23,8 @@ const PlayerScreen = () => {
   } = useContext(AudioContext);
 
   const calculateSeebBar = () => {
+    console.log(totalAudioCount);
+    console.log(playbackDuration);
     if (playbackPosition !== null && playbackDuration !== null) {
       return playbackPosition / playbackDuration;
     }
@@ -31,7 +34,14 @@ const PlayerScreen = () => {
   useEffect(() => {
     // AudioListScreenのuseEffectが間に合わずにPlayerScreenを開かれた際にcurrentAudioを登録する処理
     loadPreviousAudio();
+    console.log(currentAudio);
   }, []);
+
+  const handlePlayPause = () => {
+    //play
+    //pause
+    //resume
+  };
 
   if (!currentAudio) return null;
 
@@ -66,7 +76,7 @@ const PlayerScreen = () => {
         <View style={styles.audioController}>
           <PlayerButton onPress={() => {}} iconType="PREV" />
           <PlayerButton
-            onPress={() => {}}
+            onPress={handlePlayPause}
             style={{ marginHorizontal: 25 }}
             iconType={isPlaying ? "PLAY" : "PAUSE"}
           />

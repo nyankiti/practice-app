@@ -5,12 +5,13 @@ import TabTwoScreen from "../screens/TabTwo/TabTwoScreen";
 import SvgCircleScreen from "../screens/TabTwo/SvgCircleScreen";
 import ClockScreen from "../screens/TabTwo/ClockScreen";
 import CubeScreen from "../screens/TabTwo/CubeScreen";
+import CarouselScreen from "../screens/TabTwo/CarouselScreen";
 /* types */
 import { TabTwoParamList } from "../types";
 
 export default TabTwoNavigator;
 
-export const screens = ["SvgCircle", "Clock", "Cube"];
+export const screens = ["SvgCircle", "Clock", "Cube", "Carousel"];
 
 const TabTwoStack = createStackNavigator<TabTwoParamList>();
 
@@ -25,6 +26,7 @@ function TabTwoNavigator() {
       <TabTwoStack.Screen name="SvgCircleScreen" component={SvgCircleScreen} />
       <TabTwoStack.Screen name="ClockScreen" component={ClockScreen} />
       <TabTwoStack.Screen name="CubeScreen" component={CubeScreen} />
+      <TabTwoStack.Screen name="CarouselScreen" component={CarouselScreen} />
     </TabTwoStack.Navigator>
   );
 }

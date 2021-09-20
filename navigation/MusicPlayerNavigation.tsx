@@ -7,8 +7,10 @@ import {
 /* components */
 /* screen */
 import AudioListScreen from "../screens/MusicPlayer/AudioListScreen";
+import ClassAudioListScreen from "../screens/MusicPlayer/ClassAudioListScreen";
 import PlayListScreen from "../screens/MusicPlayer/PlayListScreen";
 import PlayerScreen from "../screens/MusicPlayer/PlayerScreen";
+import ClassPlayerScreen from "../screens/MusicPlayer/ClassPlayerScreen";
 /* types */
 import { MusicPlayerParamList } from "../types";
 
@@ -23,14 +25,15 @@ function MusicPlayerNavigator({ navigation }) {
     <MusicPlayerStack.Navigator>
       <MusicPlayerStack.Screen
         name="AudioListScreen"
-        component={AudioListScreen}
+        component={ClassAudioListScreen}
+        // component={AudioListScreen}
         options={{
           headerTitle: "Play List",
           headerRight: () => (
             <TouchableOpacity
-              onPress={() => navigation.navigate("PlayListScreen")}
+              onPress={() => navigation.navigate("PlayerScreen")}
             >
-              <Text>PlayList画面へ</Text>
+              <Text>Player画面へ</Text>
             </TouchableOpacity>
           ),
         }}
@@ -42,14 +45,27 @@ function MusicPlayerNavigator({ navigation }) {
           headerTitle: "Player",
           headerRight: () => (
             <TouchableOpacity
-              onPress={() => navigation.navigate("PlayerScreen")}
+              onPress={() => navigation.navigate("AudioListScreen")}
             >
-              <Text>Player画面へ</Text>
+              <Text>Audio Listへ戻る</Text>
             </TouchableOpacity>
           ),
         }}
       />
-      <MusicPlayerStack.Screen name="PlayerScreen" component={PlayerScreen} />
+      <MusicPlayerStack.Screen
+        name="PlayerScreen"
+        component={ClassPlayerScreen}
+        options={{
+          headerTitle: "Player",
+          headerRight: () => (
+            <TouchableOpacity
+              onPress={() => navigation.navigate("PlayListScreen")}
+            >
+              <Text>Play list画面へ</Text>
+            </TouchableOpacity>
+          ),
+        }}
+      />
     </MusicPlayerStack.Navigator>
   );
 }

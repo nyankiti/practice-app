@@ -7,6 +7,7 @@ import useCachedResources from "./hooks/useCachedResources";
 import useColorScheme from "./hooks/useColorScheme";
 import Navigation from "./navigation";
 import AudioProvider from "./context/AudioProvider";
+import { ClassAudioProvider } from "./context/ClassAudioProvider";
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -16,12 +17,12 @@ export default function App() {
     return null;
   } else {
     return (
-      <AudioProvider>
+      <ClassAudioProvider>
         <SafeAreaProvider>
           <Navigation colorScheme={colorScheme} />
           <StatusBar />
         </SafeAreaProvider>
-      </AudioProvider>
+      </ClassAudioProvider>
     );
   }
 }
